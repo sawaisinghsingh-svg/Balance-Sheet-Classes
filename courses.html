@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Courses</title>
+</head>
+<body>
+
+<script>
+let user = localStorage.getItem("user");
+
+if(!user){
+  window.location.href = "auth.html";
+}
+</script>
+
+<h1>📚 My Coaching Dashboard</h1>
+
+<div>
+  <h3>📘 Maths Class 1 (FREE)</h3>
+  <button onclick="location.href='player.html'">▶ Start</button>
+</div>
+
+<div>
+  <h3>🔥 Advanced Maths (PAID)</h3>
+  <button onclick="alert('Buy course first 💰')">Locked 🔒</button>
+</div>
+
+<br>
+
+<button onclick="logout()">Logout</button>
+
+<script>
+function logout(){
+  localStorage.removeItem("user");
+  window.location.href = "auth.html";
+}
+</script>
+
+</body>
+</html>
