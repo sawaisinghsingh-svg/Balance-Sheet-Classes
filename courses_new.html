@@ -12,3 +12,11 @@
 if(!localStorage.getItem("user")){
   window.location.href = "auth.html";
 }
+<button onclick="logout()">Logout</button>
+
+<script>
+function logout(){
+  localStorage.removeItem("user");
+  window.location.href = "auth.html";
+}
+</script>
