@@ -1,48 +1,13 @@
-<h1>📘 My Courses</h1>
+<h1>📚 My Coaching Dashboard</h1>
 
 <div>
   <h3>Maths Class 1</h3>
-  <a href="player.html">▶ Watch</a>
+  <button onclick="location.href='player.html'">▶ Start</button>
 </div>
 
 <div>
   <h3>Reasoning Class 1</h3>
-  <a href="player.html">▶ Watch</a>
-</div>
-if(!localStorage.getItem("user")){
-  window.location.href = "auth.html";
-}
-<button onclick="logout()">Logout</button>
-
-<script>
-function logout(){
-  localStorage.removeItem("user");
-  window.location.href = "auth.html";
-}
-</script>
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Courses Dashboard</title>
-</head>
-<body>
-
-<h1>📚 My Coaching Dashboard</h1>
-
-<p>Welcome! Start learning below 👇</p>
-
-<hr>
-
-<div style="border:1px solid #ccc; padding:10px; margin-bottom:10px;">
-  <h3>📘 Maths Class 1</h3>
-  <p>Basic Algebra Concepts</p>
-  <button onclick="location.href='player.html'">▶ Start Lesson</button>
-</div>
-
-<div style="border:1px solid #ccc; padding:10px;">
-  <h3>🧠 Reasoning Class 1</h3>
-  <p>Logical Thinking Basics</p>
-  <button onclick="location.href='player.html'">▶ Start Lesson</button>
+  <button onclick="location.href='player.html'">▶ Start</button>
 </div>
 
 <br>
@@ -55,6 +20,3 @@ function logout(){
   window.location.href = "auth.html";
 }
 </script>
-
-</body>
-</html>
