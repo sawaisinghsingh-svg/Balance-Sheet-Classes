@@ -1,4 +1,4 @@
-# Coaching App
+# Balance-Sheet-Classes
 
 Simple online coaching app built using HTML + Firebase.
 
