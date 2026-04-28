@@ -5,12 +5,12 @@
 </head>
 <body>
 
-<!-- LOGIN PROTECTION -->
+<!-- 🔐 LOGIN PROTECTION -->
 <script>
-let user = localStorage.getItem("user");
+const user = localStorage.getItem("user");
 
 if(!user){
-  window.location.href = "auth.html";
+  window.location.replace("auth.html");
 }
 </script>
 
@@ -37,7 +37,7 @@ if(!user){
 
 <br>
 
-<!-- EXTRA FEATURES (future ready) -->
+<!-- EXTRA SECTION -->
 <div id="extra">
   <h3>📊 Progress (Coming Soon)</h3>
   <p>Track your learning progress</p>
@@ -48,26 +48,31 @@ if(!user){
 <!-- LOGOUT -->
 <button onclick="logout()">Logout</button>
 
-<!-- CORE LOGIC -->
+<!-- 🚀 FINAL COMBINED LOGIC -->
 <script>
 
-// show user email
-document.getElementById("userEmail").innerText = localStorage.getItem("user");
+// 👤 show user email
+document.getElementById("userEmail").innerText =
+  localStorage.getItem("user");
 
-// logout
+// 🚪 logout
 function logout(){
   localStorage.removeItem("user");
-  window.location.href = "auth.html";
+  window.location.replace("auth.html");
 }
 
-// paid check
-let isPaidUser = localStorage.getItem("paid");
+// 💰 PAID SYSTEM CHECK
+const isPaid = localStorage.getItem("paid") === "true";
 
-if(isPaidUser !== "true"){
-  document.getElementById("paidCourse").style.display = "none";
-}
+document.addEventListener("DOMContentLoaded", function () {
+  const paidBox = document.getElementById("paidCourse");
 
-// payment system (demo now, real later)
+  if(!isPaid && paidBox){
+    paidBox.style.display = "none";
+  }
+});
+
+// 💳 PAYMENT (DEMO SYSTEM)
 function payNow(){
   localStorage.setItem("paid", "true");
   alert("🎉 Payment Successful! Course Unlocked");
