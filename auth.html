@@ -41,7 +41,17 @@
     .then(() => {
       alert("Login Success");
       window.location.href = "courses.html";
-    })
+    })function login(){
+  const emailVal = document.getElementById("email").value;
+  const passVal = document.getElementById("password").value;
+
+  firebase.auth().signInWithEmailAndPassword(emailVal, passVal)
+  .then((user) => {
+    localStorage.setItem("user", emailVal);  // save session
+    window.location.href = "courses.html";
+  })
+  .catch(err => alert(err.message));
+}
     .catch(err => alert(err.message));
   }
 </script>
