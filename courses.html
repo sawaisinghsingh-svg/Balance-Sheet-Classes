@@ -37,4 +37,9 @@ function logout(){
 </script>
 
 </body>
+  let isPaidUser = localStorage.getItem("paid");
+
+if(isPaidUser !== "true"){
+  document.getElementById("paidCourse").style.display = "none";
+}
 </html>
